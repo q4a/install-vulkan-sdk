@@ -49,7 +49,7 @@ function install_linux() {
 function _install_windows_qt() {
   test -d $VULKAN_SDK && test -f vulkan_sdk.exe
   echo "Executing Vulkan SDK installer headlessly to $VULKAN_SDK..." >&2
-  ./vulkan_sdk.exe --root "$VULKAN_SDK" --accept-licenses --default-answer --confirm-command install
+  ./vulkan_sdk.exe --root "$VULKAN_SDK" --accept-licenses --default-answer --confirm-command install com.lunarg.vulkan.volk
 }
 # older SDK installers could be reliably extracteed via 7z.exe
 function _install_windows_7z() {
